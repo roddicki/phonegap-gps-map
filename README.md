@@ -25,6 +25,7 @@ Note that this application requires an Google Map API key to work. This should b
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY-HERE"></script>
 
 ```
+get an API key: https://developers.google.com/maps/documentation/javascript/get-api-key
 
 Code example
 ------------
