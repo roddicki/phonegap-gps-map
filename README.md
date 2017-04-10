@@ -27,12 +27,6 @@ Note that this application requires an Google Map API key to work. This should b
 
 Code example
 ------------
-The event Listener:
-```
-document.addEventListener('deviceready', function() {
-    //your code here
-});
-```
 
 A example function to retrieve gps co-ordinates :
 ```
