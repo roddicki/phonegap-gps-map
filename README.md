@@ -19,6 +19,12 @@ https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device-orient
 
 It then uses the Google Map API to plot the retrieved location on a map.
 
+Note that this application requires an Google Map API key to work. This should be added in the script tags at the bottom of index.html 
+```
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY-HERE"></script>
+
+```
+
 Code example
 ------------
 The event Listener:
