@@ -1,0 +1,23 @@
+
+div, p, a {
+    text-shadow: none !important;
+}
+
+body, .custom-background  {
+	margin:0;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #FFF30C; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FFF30C, #8FBF1A); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF30C, #8FBF1A); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF30C, #8FBF1A); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF30C, #8FBF1A); /* Standard syntax (must be last) */  
+}
+
+.custom-btn {
+    background-color: transparent !important;
+    border: 1px solid black !important;
+    border-radius: 6px !important;
+}
