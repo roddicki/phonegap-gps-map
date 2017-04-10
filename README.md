@@ -24,7 +24,7 @@ Code example
 The event Listener:
 ```
 document.addEventListener('deviceready', function() {
-    
+    //your code here
 });
 ```
 
