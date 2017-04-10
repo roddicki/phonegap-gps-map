@@ -1,6 +1,6 @@
 # phonegap-gps-map
 This is a basic phonegap application that is ready for testing and further development.
-Note it does not contain a config.xml file
+Note it does not contain a config.xml file.
 This application checks the device gps and displays the location on a google map.
 
 How to use
@@ -12,7 +12,12 @@ More information
 ----------
 This repository differs from the standard “hello world” application by rewriting a simpler event handler that binds any custom JavaScript functions to the status of the mobile device (deviceready).
 
-The relevant code live in www/js/index.js.
+The relevant code lives in www/js/index.js.
+
+The application uses the device orientation plug in to retrieve gps co-ordinates.
+https://cordova.apache.org/docs/en/latest/reference/cordova-plugin-device-orientation/index.html
+
+It then uses the Google Map API to plot the retrieved location on a map.
 
 Code example
 ------------
@@ -23,16 +28,28 @@ document.addEventListener('deviceready', function() {
 });
 ```
 
-An example function:
+A example function to retrieve gps co-ordinates :
 ```
 document.addEventListener('deviceready', function() {
     
-    //example function
-    function changeSomeText() {
-        document.getElementById('change').innerHTML = "this text was changed by javascript";
-    }
+    function testGPS() {
+	  navigator.geolocation.getCurrentPosition(onSuccess, onError, {maximumAge: 3600000, timeout: 5000, enableHighAccuracy: true}); 
+	}
 
-    //run the example function
-    changeSomeText();
+    // onSuccess Callback
+	// This passes a Position object into the function, which contains the current GPS coordinates
+	function onSuccess(position) {
+		//display the co ordinates
+	    document.getElementById('gpsresult').innerHTML = position.coords.latitude +','+ position.coords.longitude;
+	};
+
+	// onError Callback receives a PositionError object
+	function onError(error) {
+	    //add some message about location services being turned off
+	    var error = ('code: ' + error.code + 'message: ' + error.message);
+	    document.getElementById('gpsresult').innerHTML = error;
+	    alert("Location Services Unavailable");
+
+	}
 });
 ```
