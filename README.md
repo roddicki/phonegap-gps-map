@@ -5,9 +5,9 @@ This application checks the device gps and displays the location on a google map
 
 How to use
 ----------
-Create a new phonegap project using Phonegap cli or desktop app.
- 
-Replace the www directory with this repository.
+1. Create a new phonegap project using Phonegap cli or desktop app.
+
+2. Replace the www directory with this repository.
 
 More information
 ----------
